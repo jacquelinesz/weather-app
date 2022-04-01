@@ -13,7 +13,10 @@
   padding: 20px;
 }
 .current-icon {
-  font-size: 150px;
+  font-size: 125px;
+}
+.description {
+  font-size: 28px;
 }
 .day-0 {
   border: 1px solid #0d47a1;
@@ -47,6 +50,7 @@
 }
 h1 {
   font-size: 30px;
+  padding-bottom: 15px;
 }
 h3 {
   line-height: 28px;
