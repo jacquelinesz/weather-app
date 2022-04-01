@@ -15,6 +15,17 @@
 .current-icon {
   font-size: 125px;
 }
+.current-temp-number {
+  font-size: 50px;
+  font-weight: 400;
+  position: relative;
+  top: -35px;
+}
+.units {
+  font-size: 16px;
+  position: relative;
+  top: -60px;
+}
 .description {
   font-size: 28px;
 }
