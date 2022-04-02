@@ -8,66 +8,74 @@
   border-radius: 10px;
   color: #000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  max-width: 700px;
+  max-width: 600px;
   margin: 30px auto;
   padding: 20px;
 }
-.current-icon {
-  font-size: 125px;
+.search-form {
+  font-size: 30px;
 }
-.current-temp-number {
-  font-size: 70px;
-  font-weight: 400;
-  position: relative;
-  top: -30px;
+.icon {
+  height: 90px;
+  width: 90px;
+}
+.temp-number {
+  font-size: 60px;
+  line-height: 1;
 }
 .units {
-  font-size: 16px;
   position: relative;
-  top: -60px;
+  font-size: 16px;
+  top: -30px;
 }
 .description {
-  font-size: 28px;
+  font-size: 20px;
 }
 .day-0 {
   border: 1px solid #0d47a1;
   border-radius: 5px;
   padding: 5px;
+  font-size: 15px;
 }
 .day-1 {
   border: 1px solid #0d47a1;
   border-radius: 5px;
   padding: 5px;
+  font-size: 15px;
 }
 .day-2 {
   border: 1px solid #0d47a1;
   border-radius: 5px;
   padding: 5px;
+  font-size: 15px;
 }
 .day-3 {
   border: 1px solid #0d47a1;
   border-radius: 5px;
   padding: 5px;
+  font-size: 15px;
 }
 .day-4 {
   border: 1px solid #0d47a1;
   border-radius: 5px;
   padding: 5px;
+  font-size: 15px;
 }
 .day-5 {
   border: 1px solid #0d47a1;
   border-radius: 5px;
   padding: 5px;
+  font-size: 15px;
 }
 h1 {
-  font-size: 30px;
+  font-size: 20px;
   padding-bottom: 15px;
 }
 h3 {
   line-height: 28px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 100px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 ul {
   margin: 0;
