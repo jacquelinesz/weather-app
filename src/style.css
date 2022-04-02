@@ -12,9 +12,6 @@
   margin: 30px auto;
   padding: 20px;
 }
-.search-form {
-  font-size: 30px;
-}
 .icon {
   height: 90px;
   width: 90px;
@@ -69,9 +66,9 @@
 }
 h1 {
   font-size: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
-h3 {
+h2 {
   line-height: 28px;
   font-size: 20px;
   font-weight: 100px;

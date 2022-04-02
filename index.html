@@ -24,26 +24,32 @@
     <div class="container">
       <div class="weather-app">
         <h1>
-          <div class="row">
-            <div class="col-8">
-              <form id="search-form">
+          <form id="search-form">
+              <div class="row">
+                  <div class="col-9">
                 <input
                   id="search-city-input"
                   class="search-bar"
                   type="text"
                   placeholder="🔍  Search for a city"
+                  autocomplete="off"
                 />
+                </div>
+                <div class="col-3">
                 <input
                   id="search-button"
-                  class="button"
+                  class="search-button w-100"
                   type="submit"
                   value="Search"
                 />
+                </div>
               </form>
-            </div>
-          </div>
         </h1>
         <h2>
+          <span id="city">Current City</span> | Last updated:
+          <span id="date">Today's Date</span>
+        </h3>
+        <h3>
           <div class="row">
             <div class="col-6">
               <img
@@ -62,51 +68,9 @@
               </ul>
             </div>
           </div>
-        </h2>
-        <h3>
-          <span id="city">Current City</span> | Last updated:
-          <span id="date">Today's Date</span>
         </h3>
-        <h5>
-          <div class="row">
-            <div class="col">
-              <div class="day-0">
-                <li>Today</li>
-                <li>☀️</li>
-                <li>XX°C / XX°C</li>
+        
               </div>
-            </div>
-            <div class="col">
-              <div class="day-1">
-                <li>Tuesday</li>
-                <li>☀️</li>
-                <li>XX°C / XX°C</li>
-              </div>
-            </div>
-            <div class="col">
-              <div class="day-2">
-                <li>Wednesday</li>
-                <li>☀️</li>
-                <li>XX°C / XX°C</li>
-              </div>
-            </div>
-            <div class="col">
-              <div class="day-3">
-                <li>Thursday</li>
-                <li>☀️</li>
-                <li>XX°C / XX°C</li>
-              </div>
-            </div>
-            <div class="col">
-              <div class="day-4">
-                <li>Friday</li>
-                <li>☀️</li>
-                <li>XX°C / XX°C</li>
-              </div>
-            </div>
-          </div>
-        </h5>
-      </div>
       <small>
         <a href="https://github.com/jacquelinesz/weather-app" target="_blank"
           >Open-source code</a
