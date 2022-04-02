@@ -16,10 +16,10 @@
   font-size: 125px;
 }
 .current-temp-number {
-  font-size: 50px;
+  font-size: 70px;
   font-weight: 400;
   position: relative;
-  top: -35px;
+  top: -30px;
 }
 .units {
   font-size: 16px;
@@ -75,4 +75,5 @@ ul {
 }
 li {
   list-style: none;
+  text-transform: capitalize;
 }
