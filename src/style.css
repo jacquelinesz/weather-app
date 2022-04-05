@@ -28,40 +28,15 @@
 .description {
   font-size: 20px;
 }
-.day-0 {
-  border: 1px solid #0d47a1;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 15px;
-}
-.day-1 {
-  border: 1px solid #0d47a1;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 15px;
-}
-.day-2 {
-  border: 1px solid #0d47a1;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 15px;
-}
-.day-3 {
-  border: 1px solid #0d47a1;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 15px;
-}
-.day-4 {
-  border: 1px solid #0d47a1;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 15px;
-}
+.day-0,
+.day-1,
+.day-2,
+.day-3,
+.day-4,
 .day-5 {
   border: 1px solid #0d47a1;
   border-radius: 5px;
-  padding: 5px;
+  padding: 15px 0px;
   font-size: 15px;
 }
 h1 {
