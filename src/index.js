@@ -52,10 +52,10 @@ function displayForecast(response) {
             <div class="weather-forecast-temperature">
               <span class="weather-forecast-low">${Math.round(
                 forecastDay.temp.min
-              )}°C</span> |
+              )}°F</span> |
               <span class="weather-forecast-high">${Math.round(
                 forecastDay.temp.max
-              )}°C</span>
+              )}°F</span>
             </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   let apiKey = "3e9c05f050794f0de7606b04408962e1";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -97,7 +97,7 @@ function displayTemperature(response) {
 
 function search(city) {
   let apiKey = "3e9c05f050794f0de7606b04408962e1";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
@@ -116,19 +116,5 @@ function displayFahrenheit(event) {
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   temperature.innerHTML = Math.round(fahrenheitTemp);
 }
-
-function displayCelsius(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#temp-number");
-  temperature.innerHTML = Math.round(celsiusTemp);
-}
-
-let celsiusTemp = null;
-
-let fahrenheit = document.querySelector("#fahrenheit-link");
-fahrenheit.addEventListener("click", displayFahrenheit);
-
-let celsius = document.querySelector("#celsius-link");
-celsius.addEventListener("click", displayCelsius);
 
 search("London");
