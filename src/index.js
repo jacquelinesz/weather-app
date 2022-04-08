@@ -1,9 +1,7 @@
 function currentDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
+  hours = ((hours + 11) % 12) + 1;
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -53,9 +51,9 @@ function displayForecast(response) {
               <span class="weather-forecast-low">${Math.round(
                 forecastDay.temp.min
               )}°F</span> |
-              <span class="weather-forecast-high">${Math.round(
+              <span class="weather-forecast-high"><strong>${Math.round(
                 forecastDay.temp.max
-              )}°F</span>
+              )}°F</strong></span>
             </div>
         </div>
       </div>
@@ -122,4 +120,4 @@ function getCurrentPosition() {
 let button = document.querySelector("#current-location-button");
 button.addEventListener("click", getCurrentPosition);
 
-search("London");
+search("Charlotte");

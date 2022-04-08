@@ -12,6 +12,19 @@
   margin: 30px auto;
   padding: 20px;
 }
+.search-bar {
+  border: 1px solid #0d47a1;
+  background: #fff;
+  border-radius: 3px;
+  line-height: 30px;
+}
+.search-button,
+.current-location {
+  border: 1px solid #0d47a1;
+  background: #fff;
+  border-radius: 3px;
+  line-height: 30px;
+}
 .icon {
   height: 90px;
   width: 90px;
@@ -33,6 +46,9 @@
   border-radius: 5px;
   padding: 15px 0px;
   font-size: 15px;
+}
+.weather-forecast-low {
+  opacity: 0.4;
 }
 h1 {
   font-size: 20px;
