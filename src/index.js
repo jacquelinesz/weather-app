@@ -106,15 +106,20 @@ function handleSubmit(event) {
   let cityInput = document.querySelector("#search-city-input");
   search(cityInput.value);
 }
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-function displayFahrenheit(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#temp-number");
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-  temperature.innerHTML = Math.round(fahrenheitTemp);
+function currentLocation(position) {
+  let apiKey = "3e9c05f050794f0de7606b04408962e1";
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayTemperature);
 }
+function getCurrentPosition() {
+  navigator.geolocation.getCurrentPosition(currentLocation);
+}
+let button = document.querySelector("#current-location-button");
+button.addEventListener("click", getCurrentPosition);
 
 search("London");
