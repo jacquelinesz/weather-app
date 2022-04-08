@@ -20,6 +20,7 @@ function currentDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+
 function displayForecast() {
   let forecast = document.querySelector("#weather-forecast");
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -49,6 +50,12 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecast.innerHTML = forecastHTML;
 }
+
+function getForecast(coordinates) {
+  let apiKey = "3e9c05f050794f0de7606b04408962e1";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 function displayTemperature(response) {
   let temperature = document.querySelector("#temp-number");
   celsiusTemp = response.data.main.temp;
@@ -69,17 +76,21 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
+  getForecast(response.data.coord);
 }
+
 function search(city) {
   let apiKey = "3e9c05f050794f0de7606b04408962e1";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
+
 function handleSubmit(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#search-city-input");
   search(cityInput.value);
 }
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
@@ -89,14 +100,14 @@ function displayFahrenheit(event) {
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   temperature.innerHTML = Math.round(fahrenheitTemp);
 }
+
 function displayCelsius(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temp-number");
   temperature.innerHTML = Math.round(celsiusTemp);
 }
-let celsiusTemp = null;
 
-displayForecast();
+let celsiusTemp = null;
 
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", displayFahrenheit);
